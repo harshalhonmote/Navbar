@@ -1,0 +1,90 @@
+
+.container {
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 2rem;
+	background-color: var(--primaryColor);
+	color: var(--textColor);
+}
+
+  .facebook {
+    margin-left: 400px;
+    color: #3b5998;
+  }
+  .instagram {
+    margin-left: 50px;
+    color: #c32aa3;
+  }
+  .youtube {
+    margin-left: 50px;
+    color: #ff0000;
+  }
+
+nav a {
+    margin-left: 400px;
+	margin: 0 1rem;
+	color: var(--textColor);
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: var(--secondaryColor);
+}
+
+.container .nav-btn {
+	padding: 2px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+.container div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+	.container .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.container nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 50%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 2rem;
+		background-color: var(--primaryColor);
+		transition: 0.5s;
+		transform: translateX(100vh);
+	}
+
+	.container .responsive {
+		transform: none;
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+	}
+}
